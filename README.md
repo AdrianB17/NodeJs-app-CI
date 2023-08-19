@@ -29,7 +29,6 @@
 # ---------Installing SonarQube---------
 <p align="left">docker run -d --name sonar -p 9000:9000 sonarqube:lts-community</p>
 
-# ---------Installing SonarQube---------
 <p align="left"></p>
 <p align="left"></p>
 <p align="left"></p>
