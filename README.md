@@ -38,10 +38,11 @@
 <p align="left">docker run -d --name sonar -p 9000:9000 sonarqube:lts-community</p>
 
 # ---------Installing Trivy---------
-<p align="left"></p>
-<p align="left"></p>
-<p align="left"></p>
-<p align="left"></p>
-<p align="left"></p>
+<p align="left">sudo apt-get install wget apt-transport-https gnupg lsb-release</p>
+<p align="left">wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+</p>
+<p align="left">echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list</p>
+<p align="left">sudo apt-get update</p>
+<p align="left">sudo apt-get install trivy</p>
 <p align="left"></p>
 <p align="left"></p>
