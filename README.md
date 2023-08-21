@@ -1,10 +1,18 @@
 # Configurations & Tools
 
 # ---------Installing Jenkins---------
-<p align="left">sudo wget https://updates.jenkins.io/download/war/2.387.3/jenkins.war</p>
 <p align="left">sudo apt update -y</p>
-<p align="left">sudo apt install openjdk-11-jre -y</p>
-<p align="left">java -jar jenkins.war  --httpPort=8082</p>
+<p align="left">curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null</p>
+<p align="left">echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null</p>
+<p align="left">sudo apt-get update -y</p>
+<p align="left">sudo apt-get install jenkins -y</p>
+<p align="left">sudo systemctl enable jenkins</p>
+<p align="left">sudo systemctl start jenkins</p>
+<p align="left">sudo systemctl status jenkins</p>
+
 
 # ---------Installing Docker---------
 <p align="left">sudo apt-get update</p>
@@ -29,6 +37,7 @@
 # ---------Installing SonarQube---------
 <p align="left">docker run -d --name sonar -p 9000:9000 sonarqube:lts-community</p>
 
+# ---------Installing Trivy---------
 <p align="left"></p>
 <p align="left"></p>
 <p align="left"></p>
